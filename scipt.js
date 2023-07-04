@@ -5,6 +5,7 @@ const form=document.getElementById("form");
 
 
 form.addEventListener("submit", function(event) {
+    document.getElementById("btn").value="Add Student";
    event.preventDefault();
     let name = document.getElementById("name").value;
     let age = document.getElementById("age").value;
@@ -20,11 +21,10 @@ form.addEventListener("submit", function(event) {
         degree: degree, 
         email: email
     }
-    imgs.push(editicon);
-    imgs.push(deleteicon);
+
     students.push(student);
     
-    console.log(students);
+    
     displaydata(students);
 });
  
@@ -42,11 +42,11 @@ function displaydata(arr){
         <td class="icons">
         <div>${arr[i].degree}</div>
         <div>
-        <button id="edit" class="btn" onclick="editData(event)">
+        <button id="edit-button" class="btn" onclick="editData(event)" style="background-color:grey">
         <img src="assets/edit1.png" id="edit-id${arr[i].ID}" alt="edit">
         </button>
         <button id="trash-button" class="btn" onclick="deleteData(event)">
-        <img src="assets/trash.png" id="trash-id${arr[i].ID}" alt="trash">
+        <img src="assets/trash.png" id="trash-id${arr[i].ID}" alt="trash" style="background-color:red">
         </button>
         </div>
         </td>
@@ -103,14 +103,13 @@ document.getElementById("searchinput").addEventListener("input",search);
 
 function editData(event){
 
+    document.getElementById("btn").value="Edit Student";
+
     let btnID = event.target.id;  
     let extractedID = Number(btnID.substring(7));
 
-    
-    let toggle = document.getElementById("edit");
-    toggle.textContent = '';
-    toggle.textContent = 'Edit Student';
-    
+    console.log(extractedID);
+
 
     for(let i = 0;i<students.length;i++){
         if(students[i].ID == extractedID){
@@ -120,8 +119,27 @@ function editData(event){
             document.getElementById("gpa").value = students[i].gpa;
             document.getElementById("degree").value = students[i].degree;
             students.splice(i,1);
-            displaydata(students);
+
             break;
         }
     }
+
+   
+    
+
+    
+    
+}
+
+function deleteData(event){
+
+    let btnID = event.target.id;  
+    let extractedID = Number(btnID.substring(8));
+    
+    for(let i = 0;i<students.length;i++){
+        if(students[i].ID == extractedID){
+            students.splice(i,1);
+        }
+    }
+    displaydata(students);
 }
