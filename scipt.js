@@ -102,11 +102,11 @@ function search(){
 document.getElementById("searchinput").addEventListener("input",search);
 
 function editData(event){
-    //first store the data in variable
-    let btnID = event.target.id;  //edit-id
+
+    let btnID = event.target.id;  
     let extractedID = Number(btnID.substring(7));
 
-    //changing button colour and content
+    
     let toggle = document.getElementById("edit");
     toggle.textContent = '';
     toggle.textContent = 'Edit Student';
