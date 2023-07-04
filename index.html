@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>STUDENT MANAGEMENT CRUD</h1>
+    
+    <form id="form">
+        <div class="for">
+            <div >
+                <input id="name" placeholder="Name" type="text">
+            </div>
+            <div >
+                <input id="email" placeholder="Email" type="email">
+            </div>
+            <div >
+                <input id="gpa" placeholder="GPA" type="text">
+            </div>
+            <div >
+                <input id="age" placeholder="Age" type="number">
+            </div>
+            <div >
+                <input id="degree" placeholder="Degree" type="text">
+
+            </div>
+
+        </div>
+        <div class="btn">
+            <input type="submit" value="save" >
+        </div>
+    </form>
+    
+    <div id="search">
+        <input id="searchinput" type="text" placeholder="Search by Name, email or degree" >
+    </div>
+    <div class="table">
+        <table id="table">
+            <thead>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>GPA</th>
+                <th>Degree</th>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="./scipt.js"></script>
+</body>
+</html>

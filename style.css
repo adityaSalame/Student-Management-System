@@ -1,0 +1,74 @@
+*{
+    margin:0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(228, 215, 215);
+}
+
+h1{
+    margin:15px;
+}
+
+.for{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.for div{
+    margin:15px;
+}
+
+.for input{
+    width:400px;
+    font-size: large;
+    height: 40px;
+}
+
+.btn input{
+    width:400px;
+    font-size: large;
+    height: 40px;
+    margin-left: 15px;
+}
+
+#search input{
+    width:96%;
+    margin:1%;
+    font-size: large;
+    height: 40px;
+}
+
+.table table{
+    width:96%;
+    margin:1%;
+    min-height:400px;
+    border: 1px solid;
+    border-collapse: collapse;
+    
+}
+
+th{
+    border: 1px solid;
+    font-size: larger;
+}
+tbody{
+   
+    
+    border: 1px solid;
+
+    empty-cells: show;
+}
+td{
+    border: 1px solid;
+    padding-left: 5px;
+    empty-cells: show;
+}
+tr{
+    height:5%;
+}
+
